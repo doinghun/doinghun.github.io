@@ -18,12 +18,12 @@
 <meta property="og:site_name" content="Dohun&#39;s Dev Blog">
 <meta property="og:description" content="Using JavaScript, declaring variables, initializing them, and assigning them new values later on is something we do on a daily basis. So what actually happens in memory when we declare &amp;amp; assign va">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://doinghun.github.io/2019/12/22/javascript-memory-model/js-memory-model.png">
-<meta property="og:updated_time" content="2020-01-12T15:30:47.081Z">
+<meta property="og:image" content="http://doinghun.github.io/2019/12/21/javascript-memory-model/js-memory-model.png">
+<meta property="og:updated_time" content="2020-01-12T17:14:50.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Memory Model">
 <meta name="twitter:description" content="Using JavaScript, declaring variables, initializing them, and assigning them new values later on is something we do on a daily basis. So what actually happens in memory when we declare &amp;amp; assign va">
-<meta name="twitter:image" content="http://doinghun.github.io/2019/12/22/javascript-memory-model/js-memory-model.png">
+<meta name="twitter:image" content="http://doinghun.github.io/2019/12/21/javascript-memory-model/js-memory-model.png">
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="icon" href="/images/icon.png">
+<link rel="icon" href="/img/icon.png">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -93,7 +93,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/icon.png" alt="Memory Model" height="28">
+                <img src="/img/icon.png" alt="Memory Model" height="28">
             
             </a>
         </div>
@@ -144,7 +144,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="/2019/12/22/javascript-memory-model/js-memory-model.png" alt="Memory Model">
+            <img class="thumbnail" src="/2019/12/21/javascript-memory-model/js-memory-model.png" alt="Memory Model">
         </span>
     </div>
     
@@ -178,7 +178,7 @@
             <p>Using JavaScript, declaring variables, initializing them, and assigning them new values later on is something we do on a daily basis. So what actually happens in memory when we declare &amp; assign value?</p>
 <a id="more"></a>
 
-<h3 id="Variable-declarations-and-assignments-for-JS-primitives"><a href="#Variable-declarations-and-assignments-for-JS-primitives" class="headerlink" title="Variable declarations and assignments for JS primitives"></a>Variable declarations and assignments for JS primitives</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> myNumber = <span class="hljs-number">23</span></span><br><span class="line"><span class="hljs-keyword">let</span> newVar = myNumber</span><br><span class="line">myNumber = myNumber + <span class="hljs-number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="Variable-declarations-and-assignments-for-JS-primitives"><a href="#Variable-declarations-and-assignments-for-JS-primitives" class="headerlink" title="Variable declarations and assignments for JS primitives"></a>Variable declarations and assignments for JS primitives</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> myNumber = <span class="hljs-number">23</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> newVar = myNumber;</span><br><span class="line">myNumber = myNumber + <span class="hljs-number">1</span>;</span><br></pre></td></tr></table></figure>
 
  <center><img src="/2019/12/21/javascript-memory-model/js-memory-model1.jpeg" width="400"></center>
 
@@ -186,14 +186,14 @@
 <p>The call stack is where primitives are stored (in addition to function calls). While the heap is where non-primitives are stored. The key difference is that the heap can store unordered data that can grow dynamically—perfect for arrays and objects.</p>
 </blockquote>
 <h3 id="Variable-declarations-and-assignments-for-JS-non-primitives"><a href="#Variable-declarations-and-assignments-for-JS-non-primitives" class="headerlink" title="Variable declarations and assignments for JS non-primitives"></a>Variable declarations and assignments for JS non-primitives</h3><p>What actually happens in memory when we declare &amp; assign value?</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> myArray = []</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> myArray = [];</span><br></pre></td></tr></table></figure>
 
  <center><img src="/2019/12/21/javascript-memory-model/js-memory-model2.jpeg" width="400"></center>
 
 <h3 id="Let-vs-Const"><a href="#Let-vs-Const" class="headerlink" title="Let vs Const"></a>Let vs Const</h3><blockquote>
 <p>The correct way to interpret “change” is a change in memory address. Let allows you to change memory addresses. Const does not allow you to change memory addresses.</p>
 </blockquote>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span></span><br><span class="line">sum = <span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span> + <span class="hljs-number">5</span></span><br><span class="line"><span class="hljs-keyword">let</span> numbers = [] <span class="hljs-comment">// WRONG! Use const</span></span><br><span class="line">numbers.push(<span class="hljs-number">1</span>)</span><br><span class="line">numbers.push(<span class="hljs-number">2</span>)</span><br><span class="line">numbers.push(<span class="hljs-number">3</span>)</span><br><span class="line">numbers.push(<span class="hljs-number">4</span>)</span><br><span class="line">numbers.push(<span class="hljs-number">5</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> sum = <span class="hljs-number">0</span>;</span><br><span class="line">sum = <span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-number">4</span> + <span class="hljs-number">5</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> numbers = []; <span class="hljs-comment">// WRONG! Use const</span></span><br><span class="line">numbers.push(<span class="hljs-number">1</span>);</span><br><span class="line">numbers.push(<span class="hljs-number">2</span>);</span><br><span class="line">numbers.push(<span class="hljs-number">3</span>);</span><br><span class="line">numbers.push(<span class="hljs-number">4</span>);</span><br><span class="line">numbers.push(<span class="hljs-number">5</span>);</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>Google, who has some of the best coders in the world, says in their JavaScript style guide, “Declare all local variables with either const or let. Use const by default, unless a variable needs to be reassigned. The var keyword must not be used”</p>
@@ -253,7 +253,7 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="is-rounded" src="/images/me.jpg" alt="Dohun Kim">
+                        <img class="is-rounded" src="/img/me.jpg" alt="Dohun Kim">
                     </figure>
                     
                     <p class="is-size-4 is-block">
@@ -517,44 +517,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/merlabot/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/merlabot/merlabot-cover.png" alt="Merlabot">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/merlabot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Merlabot</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/12/todo-list/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/09/todo-list/todolist-cover.png" alt="ToDo List">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/todo-list/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ToDo List</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/12/TIL/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Bye bye TIL">
@@ -574,18 +536,56 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/automating-instagram-likes/" class="media-left">
+            <a href="/2019/12/31/javascript-ecmascript/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/automating-instagram-likes/like-machine.png" alt="Automating Instagram Likes">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="What is &#39;ES&#39; in JavaScript?">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.085Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/automating-instagram-likes/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Automating Instagram Likes</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T16:12:14.000Z">2019-12-31</time></div>
+                    <a href="/2019/12/31/javascript-ecmascript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">What is &#39;ES&#39; in JavaScript?</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/24/callback-promises-async-await/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/24/callback-promises-async-await/callback-hell-cover.png" alt="Callbacks, Promises &amp; Async Await">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T15:57:52.000Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/callback-promises-async-await/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Callbacks, Promises &amp; Async Await</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/javascript-memory-model/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/21/javascript-memory-model/js-memory-model.png" alt="Memory Model">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T15:51:54.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/javascript-memory-model/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Memory Model</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -608,7 +608,7 @@
                     <span class="level-item">January 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -619,7 +619,7 @@
                     <span class="level-item">December 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -835,44 +835,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/merlabot/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/merlabot/merlabot-cover.png" alt="Merlabot">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/merlabot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Merlabot</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/12/todo-list/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/09/todo-list/todolist-cover.png" alt="ToDo List">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/todo-list/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ToDo List</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/12/TIL/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Bye bye TIL">
@@ -892,18 +854,56 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/automating-instagram-likes/" class="media-left">
+            <a href="/2019/12/31/javascript-ecmascript/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/automating-instagram-likes/like-machine.png" alt="Automating Instagram Likes">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="What is &#39;ES&#39; in JavaScript?">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.085Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/automating-instagram-likes/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Automating Instagram Likes</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T16:12:14.000Z">2019-12-31</time></div>
+                    <a href="/2019/12/31/javascript-ecmascript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">What is &#39;ES&#39; in JavaScript?</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/24/callback-promises-async-await/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/24/callback-promises-async-await/callback-hell-cover.png" alt="Callbacks, Promises &amp; Async Await">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T15:57:52.000Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/callback-promises-async-await/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Callbacks, Promises &amp; Async Await</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/javascript-memory-model/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/21/javascript-memory-model/js-memory-model.png" alt="Memory Model">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T15:51:54.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/javascript-memory-model/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Memory Model</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -926,7 +926,7 @@
                     <span class="level-item">January 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -937,7 +937,7 @@
                     <span class="level-item">December 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -1127,7 +1127,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/icon.png" alt="Memory Model" height="28">
+                    <img src="/img/icon.png" alt="Memory Model" height="28">
                 
                 </a>
                 <p class="is-size-7">

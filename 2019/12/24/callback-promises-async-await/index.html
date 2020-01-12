@@ -18,12 +18,12 @@
 <meta property="og:site_name" content="Dohun&#39;s Dev Blog">
 <meta property="og:description" content="There are different ways to execute asynchronous function in JavaScript.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://doinghun.github.io/2019/12/25/callback-promises-async-await/callback-hell-cover.png">
-<meta property="og:updated_time" content="2020-01-12T15:30:47.084Z">
+<meta property="og:image" content="http://doinghun.github.io/2019/12/24/callback-promises-async-await/callback-hell-cover.png">
+<meta property="og:updated_time" content="2020-01-12T17:15:16.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Callbacks, Promises &amp; Async Await">
 <meta name="twitter:description" content="There are different ways to execute asynchronous function in JavaScript.">
-<meta name="twitter:image" content="http://doinghun.github.io/2019/12/25/callback-promises-async-await/callback-hell-cover.png">
+<meta name="twitter:image" content="http://doinghun.github.io/2019/12/24/callback-promises-async-await/callback-hell-cover.png">
 
 
 
@@ -35,7 +35,7 @@
 
 
 
-<link rel="icon" href="/images/icon.png">
+<link rel="icon" href="/img/icon.png">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -93,7 +93,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/icon.png" alt="Callbacks, Promises &amp; Async Await" height="28">
+                <img src="/img/icon.png" alt="Callbacks, Promises &amp; Async Await" height="28">
             
             </a>
         </div>
@@ -144,7 +144,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="/2019/12/25/callback-promises-async-await/callback-hell-cover.png" alt="Callbacks, Promises &amp; Async Await">
+            <img class="thumbnail" src="/2019/12/24/callback-promises-async-await/callback-hell-cover.png" alt="Callbacks, Promises &amp; Async Await">
         </span>
     </div>
     
@@ -183,17 +183,17 @@
 <li>Print a string <code>A</code>, <code>B</code>, <code>C</code> in order</li>
 <li>After a random amount of time.</li>
 </ul>
-<h3 id="Callbacks"><a href="#Callbacks" class="headerlink" title="Callbacks"></a>Callbacks</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printString</span>(<span class="hljs-params">string, callback</span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(string)</span><br><span class="line">    callback()</span><br><span class="line">  &#125;, <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>) + <span class="hljs-number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAll</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  printString(<span class="hljs-string">"A"</span>, () =&gt; &#123;</span><br><span class="line">    printString(<span class="hljs-string">"B"</span>, () =&gt; &#123;</span><br><span class="line">      printString(<span class="hljs-string">"C"</span>, () =&gt; &#123;&#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line">printAll()</span><br></pre></td></tr></table></figure>
+<h3 id="Callbacks"><a href="#Callbacks" class="headerlink" title="Callbacks"></a>Callbacks</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printString</span>(<span class="hljs-params">string, callback</span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-built_in">console</span>.log(string);</span><br><span class="line">    callback();</span><br><span class="line">  &#125;, <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>) + <span class="hljs-number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAll</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  printString(<span class="hljs-string">"A"</span>, () =&gt; &#123;</span><br><span class="line">    printString(<span class="hljs-string">"B"</span>, () =&gt; &#123;</span><br><span class="line">      printString(<span class="hljs-string">"C"</span>, () =&gt; &#123;&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">printAll();</span><br></pre></td></tr></table></figure>
 
 <p>Callback Hell</p>
 <ul>
 <li>Nesting functions within functions within functions</li>
 <li>Hard to read the code.</li>
 </ul>
-<h3 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printString</span>(<span class="hljs-params">string</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(string)</span><br><span class="line">      resolve()</span><br><span class="line">    &#125;, <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>) + <span class="hljs-number">1</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAll</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  printString(<span class="hljs-string">"A"</span>)</span><br><span class="line">    .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> printString(<span class="hljs-string">"B"</span>))</span><br><span class="line">    .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> printString(<span class="hljs-string">"C"</span>))</span><br><span class="line">&#125;</span><br><span class="line">printAll()</span><br></pre></td></tr></table></figure>
+<h3 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printString</span>(<span class="hljs-params">string</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(string);</span><br><span class="line">      resolve();</span><br><span class="line">    &#125;, <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>) + <span class="hljs-number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAll</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  printString(<span class="hljs-string">"A"</span>)</span><br><span class="line">    .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> printString(<span class="hljs-string">"B"</span>))</span><br><span class="line">    .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> printString(<span class="hljs-string">"C"</span>));</span><br><span class="line">&#125;</span><br><span class="line">printAll();</span><br></pre></td></tr></table></figure>
 
 <p>The code is no longer nested but it still looks messy!</p>
-<h3 id="Await"><a href="#Await" class="headerlink" title="Await"></a>Await</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printString</span>(<span class="hljs-params">string</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(string)</span><br><span class="line">      resolve()</span><br><span class="line">    &#125;, <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>) + <span class="hljs-number">1</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAll</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">await</span> printString(<span class="hljs-string">"A"</span>)</span><br><span class="line">  <span class="hljs-keyword">await</span> printString(<span class="hljs-string">"B"</span>)</span><br><span class="line">  <span class="hljs-keyword">await</span> printString(<span class="hljs-string">"C"</span>)</span><br><span class="line">&#125;</span><br><span class="line">printAll()</span><br></pre></td></tr></table></figure>
+<h3 id="Await"><a href="#Await" class="headerlink" title="Await"></a>Await</h3><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printString</span>(<span class="hljs-params">string</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="hljs-built_in">console</span>.log(string);</span><br><span class="line">      resolve();</span><br><span class="line">    &#125;, <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>) + <span class="hljs-number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printAll</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">await</span> printString(<span class="hljs-string">"A"</span>);</span><br><span class="line">  <span class="hljs-keyword">await</span> printString(<span class="hljs-string">"B"</span>);</span><br><span class="line">  <span class="hljs-keyword">await</span> printString(<span class="hljs-string">"C"</span>);</span><br><span class="line">&#125;</span><br><span class="line">printAll();</span><br></pre></td></tr></table></figure>
 
 <p>Await is basically syntactic sugar for Promises. It makes your asynchronous code look more like synchronous/procedural code, which is easier for humans to understand.</p>
 <hr>
@@ -252,7 +252,7 @@
                 <div>
                     
                     <figure class="image is-128x128 has-mb-6">
-                        <img class="is-rounded" src="/images/me.jpg" alt="Dohun Kim">
+                        <img class="is-rounded" src="/img/me.jpg" alt="Dohun Kim">
                     </figure>
                     
                     <p class="is-size-4 is-block">
@@ -516,44 +516,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/merlabot/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/merlabot/merlabot-cover.png" alt="Merlabot">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/merlabot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Merlabot</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/12/todo-list/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/09/todo-list/todolist-cover.png" alt="ToDo List">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/todo-list/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ToDo List</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/12/TIL/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Bye bye TIL">
@@ -573,18 +535,56 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/automating-instagram-likes/" class="media-left">
+            <a href="/2019/12/31/javascript-ecmascript/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/automating-instagram-likes/like-machine.png" alt="Automating Instagram Likes">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="What is &#39;ES&#39; in JavaScript?">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.085Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/automating-instagram-likes/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Automating Instagram Likes</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T16:12:14.000Z">2019-12-31</time></div>
+                    <a href="/2019/12/31/javascript-ecmascript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">What is &#39;ES&#39; in JavaScript?</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/24/callback-promises-async-await/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/24/callback-promises-async-await/callback-hell-cover.png" alt="Callbacks, Promises &amp; Async Await">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T15:57:52.000Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/callback-promises-async-await/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Callbacks, Promises &amp; Async Await</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/javascript-memory-model/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/21/javascript-memory-model/js-memory-model.png" alt="Memory Model">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T15:51:54.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/javascript-memory-model/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Memory Model</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -607,7 +607,7 @@
                     <span class="level-item">January 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -618,7 +618,7 @@
                     <span class="level-item">December 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -834,44 +834,6 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/merlabot/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/merlabot/merlabot-cover.png" alt="Merlabot">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/merlabot/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Merlabot</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/01/12/todo-list/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/09/todo-list/todolist-cover.png" alt="ToDo List">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.086Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/todo-list/" class="title has-link-black-ter is-size-6 has-text-weight-normal">ToDo List</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
             <a href="/2020/01/12/TIL/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Bye bye TIL">
@@ -891,18 +853,56 @@
         
         <article class="media">
             
-            <a href="/2020/01/12/automating-instagram-likes/" class="media-left">
+            <a href="/2019/12/31/javascript-ecmascript/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/2019/12/10/automating-instagram-likes/like-machine.png" alt="Automating Instagram Likes">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="What is &#39;ES&#39; in JavaScript?">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-12T15:30:47.085Z">2020-01-12</time></div>
-                    <a href="/2020/01/12/automating-instagram-likes/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Automating Instagram Likes</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T16:12:14.000Z">2019-12-31</time></div>
+                    <a href="/2019/12/31/javascript-ecmascript/" class="title has-link-black-ter is-size-6 has-text-weight-normal">What is &#39;ES&#39; in JavaScript?</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Projects/">Projects</a>
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/24/callback-promises-async-await/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/24/callback-promises-async-await/callback-hell-cover.png" alt="Callbacks, Promises &amp; Async Await">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-24T15:57:52.000Z">2019-12-24</time></div>
+                    <a href="/2019/12/24/callback-promises-async-await/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Callbacks, Promises &amp; Async Await</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/21/javascript-memory-model/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/2019/12/21/javascript-memory-model/js-memory-model.png" alt="Memory Model">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-21T15:51:54.000Z">2019-12-21</time></div>
+                    <a href="/2019/12/21/javascript-memory-model/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Memory Model</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/JavaScript/">JavaScript</a>
                     </p>
                 </div>
             </div>
@@ -925,7 +925,7 @@
                     <span class="level-item">January 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">5</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -936,7 +936,7 @@
                     <span class="level-item">December 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">7</span>
+                    <span class="level-item tag">10</span>
                 </span>
             </a>
         </li>
@@ -1126,7 +1126,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/icon.png" alt="Callbacks, Promises &amp; Async Await" height="28">
+                    <img src="/img/icon.png" alt="Callbacks, Promises &amp; Async Await" height="28">
                 
                 </a>
                 <p class="is-size-7">
