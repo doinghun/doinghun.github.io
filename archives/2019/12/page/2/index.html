@@ -7,22 +7,18 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Delete Node In a Singly Linked List - Dohun&#39;s Dev Blog</title>
+<title>Archives: 2019/12 - Dohun&#39;s Dev Blog</title>
 
 
-    <meta name="description" content="ProblemWrite a function to delete a node (except the tail) in a singly linked list, given only access to that node.">
-<meta name="keywords" content="leetcode">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Delete Node In a Singly Linked List">
-<meta property="og:url" content="http://doinghun.github.io/2019/10/02/delete-node-in-singly-linked-list/index.html">
+    <meta name="keywords" content="Developer, Singapore, Dohun Kim, Dohun, Marketer to Maker">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dohun&#39;s Dev Blog">
+<meta property="og:url" content="http://doinghun.github.io/archives/2019/12/page/2/index.html">
 <meta property="og:site_name" content="Dohun&#39;s Dev Blog">
-<meta property="og:description" content="ProblemWrite a function to delete a node (except the tail) in a singly linked list, given only access to that node.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://doinghun.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2020-01-12T15:30:47.058Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Delete Node In a Singly Linked List">
-<meta name="twitter:description" content="ProblemWrite a function to delete a node (except the tail) in a singly linked list, given only access to that node.">
+<meta name="twitter:title" content="Dohun&#39;s Dev Blog">
 <meta name="twitter:image" content="http://doinghun.github.io/images/og_image.png">
 
 
@@ -93,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/img/icon.png" alt="Delete Node In a Singly Linked List" height="28">
+                <img src="/img/icon.png" alt="Dohun&#39;s Dev Blog" height="28">
             
             </a>
         </div>
@@ -140,105 +136,57 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
-<div class="card">
+
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="tag is-link">
+        December 2019
+        </h3>
+        <div class="timeline">
+        
+            <article class="media">
+                
+                <div class="media-content">
+                    <div class="content">
+                        <time class="has-text-grey is-size-7 is-block is-uppercase" datetime="2019-12-01T15:59:35.000Z">2019-12-01</time>
+                        <a href="/2019/12/01/TIL-191130/" class="title has-link-black-ter is-size-6 has-text-weight-normal">TIL-191130</a>
+                        <div class="level article-meta is-mobile">
+                            <div class="level-left">
+                                
+                                <div class="level-item is-size-7 is-uppercase">
+                                <a class="has-link-grey -link" href="/categories/Learn-Log/">Learn Log</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+        </div>
+    </div>
+</div>
+
+
+
     
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-02T07:48:28.000Z">2019-10-02</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Data-Structures-Algorithms/">Data Structures & Algorithms</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Data-Structures-Algorithms/Linked-List/">Linked List</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 137 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                Delete Node In a Singly Linked List
-            
-        </h1>
-        <div class="content">
-            <h3 id="Problem"><a href="#Problem" class="headerlink" title=" Problem"></a><span style="background-color: #FFFBCC"> Problem</span></h3><p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.</p>
-<a id="more"></a>
-
-<p>Given linked list – head = [4,5,1,9]<br><strong>Example 1</strong>:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [4,5,1,9], node = 5</span><br><span class="line">Output: [4,1,9]</span><br></pre></td></tr></table></figure>
-
-<p><strong>Example 2</strong>:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [4,5,1,9], node = 1</span><br><span class="line">Output: [4,5,9]</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<ul>
-<li>The linked list will have at least two elements.</li>
-<li>All of the nodes’ values will be unique.</li>
-<li>The given node will not be the tail and it will always be a valid node of the linked list.</li>
-<li>Do not return anything from your function.</li>
-</ul>
-<h3 id="Approach"><a href="#Approach" class="headerlink" title=" Approach"></a><span style="background-color: #FFFBCC"> Approach</span></h3><ol>
-<li>Delete the first node</li>
-<li>Assign next node to head</li>
-</ol>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> deleteNode = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">node</span>) </span>&#123;</span><br><span class="line">  node.val = node.next.val</span><br><span class="line">  node.next = node.next.next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Take-Away"><a href="#Take-Away" class="headerlink" title="Take Away"></a>Take Away</h3><ul>
-<li><a href="https://leetcode.com/explore/learn/card/linked-list/209/singly-linked-list/1289/" target="_blank" rel="noopener">Deleting the Linked List</a></li>
-</ul>
-<hr>
-<p><em><a href="https://leetcode.com/problems/delete-node-in-a-linked-list/" target="_blank" rel="noopener">Question Source - Leetcode</a></em></p>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/leetcode/">leetcode</a>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
 <div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/03/TIL-191003/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">TIL-191003</span>
-            </a>
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous">
+            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/12/">Previous</a>
         </div>
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/02/fizz-buzz/">
-                <span class="level-item">Fizz Buzz</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
+        <div class="pagination-next is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/archives/2019/12/page/3/">Next</a>
         </div>
-        
-    </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link has-text-black-ter" href="/archives/2019/12/">1</a></li>
+            
+            <li><a class="pagination-link is-current" href="/archives/2019/12/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
 </div>
-
-
 </div>
                 
 
@@ -1129,7 +1077,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/img/icon.png" alt="Delete Node In a Singly Linked List" height="28">
+                    <img src="/img/icon.png" alt="Dohun&#39;s Dev Blog" height="28">
                 
                 </a>
                 <p class="is-size-7">

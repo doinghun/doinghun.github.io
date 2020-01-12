@@ -7,22 +7,22 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Delete Node In a Singly Linked List - Dohun&#39;s Dev Blog</title>
+<title>Bye bye TIL - Dohun&#39;s Dev Blog</title>
 
 
-    <meta name="description" content="ProblemWrite a function to delete a node (except the tail) in a singly linked list, given only access to that node.">
-<meta name="keywords" content="leetcode">
+    <meta name="description" content="Changing the format of Today I LearnedI have been recording what I learnt daily in summarised version for past 2 months. While it’s good to share my learnings on the Internet, I think there is a bette">
+<meta name="keywords" content="Developer, Singapore, Dohun Kim, Dohun, Marketer to Maker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Delete Node In a Singly Linked List">
-<meta property="og:url" content="http://doinghun.github.io/2019/10/02/delete-node-in-singly-linked-list/index.html">
+<meta property="og:title" content="Bye bye TIL">
+<meta property="og:url" content="http://doinghun.github.io/2019/12/14/TIL/index.html">
 <meta property="og:site_name" content="Dohun&#39;s Dev Blog">
-<meta property="og:description" content="ProblemWrite a function to delete a node (except the tail) in a singly linked list, given only access to that node.">
+<meta property="og:description" content="Changing the format of Today I LearnedI have been recording what I learnt daily in summarised version for past 2 months. While it’s good to share my learnings on the Internet, I think there is a bette">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://doinghun.github.io/images/og_image.png">
-<meta property="og:updated_time" content="2020-01-12T15:30:47.058Z">
+<meta property="og:updated_time" content="2020-01-12T17:31:39.052Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Delete Node In a Singly Linked List">
-<meta name="twitter:description" content="ProblemWrite a function to delete a node (except the tail) in a singly linked list, given only access to that node.">
+<meta name="twitter:title" content="Bye bye TIL">
+<meta name="twitter:description" content="Changing the format of Today I LearnedI have been recording what I learnt daily in summarised version for past 2 months. While it’s good to share my learnings on the Internet, I think there is a bette">
 <meta name="twitter:image" content="http://doinghun.github.io/images/og_image.png">
 
 
@@ -93,7 +93,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/img/icon.png" alt="Delete Node In a Singly Linked List" height="28">
+                <img src="/img/icon.png" alt="Bye bye TIL" height="28">
             
             </a>
         </div>
@@ -146,17 +146,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-02T07:48:28.000Z">2019-10-02</time>
+                <time class="level-item has-text-grey" datetime="2019-12-13T16:00:14.000Z">2019-12-14</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Data-Structures-Algorithms/">Data Structures & Algorithms</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Data-Structures-Algorithms/Linked-List/">Linked List</a>
+                <a class="has-link-grey -link" href="/categories/Learn-Log/">Learn Log</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 137 words)
+                    a few seconds read (About 72 words)
                 </span>
                 
                 
@@ -165,47 +165,15 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Delete Node In a Singly Linked List
+                Bye bye TIL
             
         </h1>
         <div class="content">
-            <h3 id="Problem"><a href="#Problem" class="headerlink" title=" Problem"></a><span style="background-color: #FFFBCC"> Problem</span></h3><p>Write a function to delete a node (except the tail) in a singly linked list, given only access to that node.</p>
-<a id="more"></a>
+            <h3 id="Changing-the-format-of-Today-I-Learned"><a href="#Changing-the-format-of-Today-I-Learned" class="headerlink" title="Changing the format of Today I Learned"></a>Changing the format of Today I Learned</h3><p>I have been recording what I learnt daily in summarised version for past 2 months.</p>
+<p>While it’s good to share my learnings on the Internet, I think there is a better format to show what I have learnt.</p>
+<p>This is why I’m pausing posting daily summarised version of TIL to switch to posting posts covering topics I learnt in-depth!</p>
+<p>Stay tuned ✌️</p>
 
-<p>Given linked list – head = [4,5,1,9]<br><strong>Example 1</strong>:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [4,5,1,9], node = 5</span><br><span class="line">Output: [4,1,9]</span><br></pre></td></tr></table></figure>
-
-<p><strong>Example 2</strong>:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: head = [4,5,1,9], node = 1</span><br><span class="line">Output: [4,5,9]</span><br></pre></td></tr></table></figure>
-
-<p>Note:</p>
-<ul>
-<li>The linked list will have at least two elements.</li>
-<li>All of the nodes’ values will be unique.</li>
-<li>The given node will not be the tail and it will always be a valid node of the linked list.</li>
-<li>Do not return anything from your function.</li>
-</ul>
-<h3 id="Approach"><a href="#Approach" class="headerlink" title=" Approach"></a><span style="background-color: #FFFBCC"> Approach</span></h3><ol>
-<li>Delete the first node</li>
-<li>Assign next node to head</li>
-</ol>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> deleteNode = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">node</span>) </span>&#123;</span><br><span class="line">  node.val = node.next.val</span><br><span class="line">  node.next = node.next.next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Take-Away"><a href="#Take-Away" class="headerlink" title="Take Away"></a>Take Away</h3><ul>
-<li><a href="https://leetcode.com/explore/learn/card/linked-list/209/singly-linked-list/1289/" target="_blank" rel="noopener">Deleting the Linked List</a></li>
-</ul>
-<hr>
-<p><em><a href="https://leetcode.com/problems/delete-node-in-a-linked-list/" target="_blank" rel="noopener">Question Source - Leetcode</a></em></p>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase">
-            <div class="level-start">
-                <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/leetcode/">leetcode</a>
-                </div>
-            </div>
         </div>
         
         
@@ -221,16 +189,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/10/03/TIL-191003/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/12/16/sort-an-array/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">TIL-191003</span>
+                <span class="level-item">912. Sort an Array</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/02/fizz-buzz/">
-                <span class="level-item">Fizz Buzz</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/12/product-of-array-except-self/">
+                <span class="level-item">238. Product of Array Except Self</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -1129,7 +1097,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/img/icon.png" alt="Delete Node In a Singly Linked List" height="28">
+                    <img src="/img/icon.png" alt="Bye bye TIL" height="28">
                 
                 </a>
                 <p class="is-size-7">
